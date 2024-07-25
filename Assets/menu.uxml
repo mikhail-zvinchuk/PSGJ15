@@ -1,0 +1,8 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:ListView style="height: 721px;" />
+    <ui:GroupBox style="flex-direction: row; align-items: flex-start; justify-content: center;">
+        <ui:Button text="New game" parse-escape-sequences="true" display-tooltip-when-elided="true" />
+    </ui:GroupBox>
+    <ui:GroupBox style="flex-direction: row; align-items: flex-start; justify-content: center;" />
+    <ui:Label tabindex="-1" text="Created by BigPupseg for Pirate Software - Game Jam 15" parse-escape-sequences="true" display-tooltip-when-elided="true" style="white-space: nowrap; -unity-text-align: upper-center;" />
+</ui:UXML>
