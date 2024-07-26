@@ -9,8 +9,5 @@ public class Location : ScriptableObject
     public string description;
     public string locationName;
 
-
-
-
-
+    public Exit[] exits;
 }

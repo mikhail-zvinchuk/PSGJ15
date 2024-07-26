@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f19dd9c3ed32794a938af07e0f8268c, type: 3}
+  m_Name: Outside
+  m_EditorClassIdentifier: 
+  description: Your stairs as always smell of cats.
+  locationName: 
+  exits:
+  - keyString: police
+    exitDescription: Go to the police station
+    valueLocation: {fileID: 0}
+  - keyString: train
+    exitDescription: Go to the train station
+    valueLocation: {fileID: 0}
+  - keyString: upstairs
+    exitDescription: Go back home
+    valueLocation: {fileID: 11400000, guid: d0b7935350ff7e6469f3c8118d6d35af, type: 2}

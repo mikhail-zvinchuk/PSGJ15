@@ -9,6 +9,7 @@ public class GController : MonoBehaviour
     public TextMeshProUGUI displayText;
 
     [HideInInspector] public LocationNavigation locationNavigation;
+    [HideInInspector] public List<string> interactionDescriptionsInLocation = new List<string>();
 
     List<string> textLog = new List<string>();
 
@@ -34,9 +35,18 @@ public class GController : MonoBehaviour
 
     public void DisplayLocationText()
     {
-        string combindeText = locationNavigation.currentLocation.description + Environment.NewLine;
+        UnpackLocation();
+
+        string joinedInteractions = string.Join(Environment.NewLine, interactionDescriptionsInLocation.ToArray());
+
+        string combindeText = locationNavigation.currentLocation.description + Environment.NewLine + joinedInteractions;
 
         LogStringWithReturn(combindeText);
+    }
+
+    void UnpackLocation()
+    {
+        locationNavigation.UnpackExits();
     }
 
     public void LogStringWithReturn(string text)
