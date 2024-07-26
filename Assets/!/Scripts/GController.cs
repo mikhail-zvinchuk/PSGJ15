@@ -7,6 +7,7 @@ public class GController : MonoBehaviour
 {
 
     public TextMeshProUGUI displayText;
+    public InputAction[] inputActions;
 
     [HideInInspector] public LocationNavigation locationNavigation;
     [HideInInspector] public List<string> interactionDescriptionsInLocation = new List<string>();
@@ -34,7 +35,10 @@ public class GController : MonoBehaviour
     }
 
     public void DisplayLocationText()
+
     {
+        ClearConnectionsForNewRoom();
+
         UnpackLocation();
 
         string joinedInteractions = string.Join(Environment.NewLine, interactionDescriptionsInLocation.ToArray());
@@ -47,6 +51,12 @@ public class GController : MonoBehaviour
     void UnpackLocation()
     {
         locationNavigation.UnpackExits();
+    }
+
+    void ClearConnectionsForNewRoom()
+    {
+        interactionDescriptionsInLocation.Clear();
+        locationNavigation.ClearExits();
     }
 
     public void LogStringWithReturn(string text)
