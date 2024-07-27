@@ -28,7 +28,7 @@ public class TextInput : MonoBehaviour
         for (int i = 0; i < controller.inputActions.Length; i++)
         {
             InputAction action = controller.inputActions[i];
-            if (action != null) {
+            if (action.keyWord == separatedInputWords[0]) {
                 action.RespondToInput(controller, separatedInputWords);
             }
 

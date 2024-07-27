@@ -11,6 +11,7 @@ public class GController : MonoBehaviour
 
     [HideInInspector] public LocationNavigation locationNavigation;
     [HideInInspector] public List<string> interactionDescriptionsInLocation = new List<string>();
+    [HideInInspector] public InteractableItems interactableItems;
 
     List<string> textLog = new List<string>();
 
@@ -18,6 +19,7 @@ public class GController : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        interactableItems = GetComponent<InteractableItems>();
         locationNavigation = GetComponent<LocationNavigation>();
     }
 
@@ -51,10 +53,47 @@ public class GController : MonoBehaviour
     void UnpackLocation()
     {
         locationNavigation.UnpackExits();
+        PrepareObjectsForInteraction(locationNavigation.currentLocation);
+    }
+
+    void PrepareObjectsForInteraction(Location location)
+    {
+        foreach (var interactableObject in location.interactableObjectsInLocation) { 
+            string descriptonNotInInventory = interactableItems.GetObjectsNotInInventory(interactableObject);
+            if (descriptonNotInInventory != null)
+            {
+                interactionDescriptionsInLocation.Add(descriptonNotInInventory);
+            }
+
+            foreach (var interaction in interactableObject.interactions)
+            {
+                switch (interaction.action.keyWord)
+                {
+                    case "examine":
+                        interactableItems.examineDictionary.Add(interactableObject.noun, interaction.textResponse);
+                        break;
+                    case "take":
+                        interactableItems.takeDictionary.Add(interactableObject.noun, interaction.textResponse);
+                        break;
+                }
+            }
+        }
+    }
+
+
+    public string TestVerbDirctinaryWithNoun(Dictionary<string, string> verbDictinary, string verb, string noun)
+    {
+        if (verbDictinary.ContainsKey(noun))
+        {
+            return verbDictinary[noun];
+        }
+
+        return "You can't " + verb + " " + noun;
     }
 
     void ClearConnectionsForNewRoom()
     {
+        interactableItems.ClearCollections();
         interactionDescriptionsInLocation.Clear();
         locationNavigation.ClearExits();
     }

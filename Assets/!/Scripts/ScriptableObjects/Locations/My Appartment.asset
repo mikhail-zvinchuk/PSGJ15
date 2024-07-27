@@ -12,9 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f19dd9c3ed32794a938af07e0f8268c, type: 3}
   m_Name: My Appartment
   m_EditorClassIdentifier: 
-  description: This your appartment whare you spent most of your time. s
+  description: This your appartment whare you spent most of your time.
   locationName: 
   exits:
   - keyString: outside
     exitDescription: You put on your clothes an go outside
     valueLocation: {fileID: 11400000, guid: b10b43666740600478cfa8e99f166c3a, type: 2}
+  interactableObjectsInLocation:
+  - {fileID: 11400000, guid: 57669f3e60b5ba14183b1725cefb7cd3, type: 2}

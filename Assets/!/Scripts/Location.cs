@@ -10,4 +10,7 @@ public class Location : ScriptableObject
     public string locationName;
 
     public Exit[] exits;
+    public InteractableObject[] interactableObjectsInLocation;
+
+
 }

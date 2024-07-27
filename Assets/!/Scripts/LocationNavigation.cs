@@ -25,7 +25,7 @@ public class LocationNavigation : MonoBehaviour
         }
     }
 
-
+    
     public void AttemptToChangeLocations(string directionNoun)
     {
         if ( exitDictinary.ContainsKey( directionNoun))

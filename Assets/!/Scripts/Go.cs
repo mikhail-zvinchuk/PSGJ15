@@ -7,6 +7,9 @@ public class Go : InputAction
 {
     public override void RespondToInput(GController controller, string[] separatedInputwords)
     {
-        controller.locationNavigation.AttemptToChangeLocations(separatedInputwords[1]);
+        if (separatedInputwords.Length >= 2)
+        {
+            controller.locationNavigation.AttemptToChangeLocations(separatedInputwords[1]);
+        }
     }
 }
