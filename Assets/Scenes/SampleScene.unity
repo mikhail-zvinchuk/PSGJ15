@@ -1376,6 +1376,9 @@ MonoBehaviour:
   inputActions:
   - {fileID: 11400000, guid: 0fe13df04c0258a4c9589f9c97da66d9, type: 2}
   - {fileID: 11400000, guid: c942abf87c9c66649965992e3c20684a, type: 2}
+  - {fileID: 11400000, guid: 791b468c28663df42ad9493dfb35da87, type: 2}
+  - {fileID: 11400000, guid: 5a7daae88c0a993448509b5b57e534c8, type: 2}
+  - {fileID: 11400000, guid: dc122b69766fd444896ac4216fc5035d, type: 2}
   locationNavigation: {fileID: 0}
   interactionDescriptionsInLocation: []
   interactableItems: {fileID: 0}
@@ -1404,6 +1407,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f1ee6a4860b7f7488fdb0b6ec93a309, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  usableItemsList:
+  - {fileID: 11400000, guid: 57669f3e60b5ba14183b1725cefb7cd3, type: 2}
   nounsInLocation: []
 --- !u!1 &1195064686
 GameObject:
@@ -1472,8 +1477,8 @@ MonoBehaviour:
     et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
     laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
     in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-    occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
-    id est laborum.
+    occaecat cupidatat non proident, <mark=#ffff00aa>sunt </mark>in culpa qui officia
+    deserunt mollit anim id est laborum.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

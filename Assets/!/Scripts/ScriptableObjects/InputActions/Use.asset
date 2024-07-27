@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ae9c110e04dae34888924b3c6b75fe3, type: 3}
-  m_Name: Take
+  m_Script: {fileID: 11500000, guid: e230cd22a763d064ea572e0a731483fe, type: 3}
+  m_Name: Use
   m_EditorClassIdentifier: 
-  keyWord: take
+  keyWord: use

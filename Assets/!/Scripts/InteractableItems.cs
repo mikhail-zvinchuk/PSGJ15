@@ -1,14 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class InteractableItems : MonoBehaviour
 {
+    public List<InteractableObject> usableItemsList;
+
     public Dictionary<string, string> examineDictionary = new Dictionary<string, string>();
     public Dictionary<string, string> takeDictionary = new Dictionary<string, string>();
 
     [HideInInspector] public List<string> nounsInLocation = new List<string>();
 
+
+
+    Dictionary<string,  ActionResponse> useDictionary = new Dictionary<string, ActionResponse>();
     List<string> nounsInInventory = new List<string>();
 
     GController controller;
@@ -29,14 +35,60 @@ public class InteractableItems : MonoBehaviour
         return null;
     }
 
-    public void DisplayInventory()
+    public void AddActionResponsesTOUseDictionary()
     {
-        controller.LogStringWithReturn("You have:");
-        foreach (var item in nounsInInventory)
+        foreach (var noun in nounsInInventory)
         {
-            controller.LogStringWithReturn(item);
+            var interactableObjectInInventory = GetInteractableObjectFromUsableList(noun);
+            if (interactableObjectInInventory == null)
+            {
+                continue;
+            } else
+            {
+                foreach(var interaction in interactableObjectInInventory.interactions)
+                {
+                    if(interaction.actionResponse == null)
+                        continue;
+
+                    if (!useDictionary.ContainsKey(noun))
+                    {
+                        useDictionary.Add(noun, interaction.actionResponse);
+                    }
+                }
+            }
+        }
+    }
+
+    InteractableObject GetInteractableObjectFromUsableList(string noun) {
+        foreach (var item in usableItemsList)
+        {
+            if( item.noun == noun)
+            {
+                return item;
+            }
 
         }
+
+        return null;
+    }
+
+
+    public void DisplayInventory()
+    {
+        if (nounsInInventory.Any())
+        {
+            controller.LogStringWithReturn("You have:");
+            foreach (var item in nounsInInventory)
+            {
+                controller.LogStringWithReturn(item);
+
+            }
+        }
+        else
+        {
+            controller.LogStringWithReturn("You don't have anything with you apart your basic clothes.");
+        }
+       
 
     }
 
@@ -63,6 +115,7 @@ public class InteractableItems : MonoBehaviour
         if (nounsInLocation.Contains(noun))
         {
             nounsInInventory.Add(noun);
+            AddActionResponsesTOUseDictionary();
             nounsInLocation.Remove(noun);
             return takeDictionary;
         } else
@@ -72,5 +125,28 @@ public class InteractableItems : MonoBehaviour
         }
 
       
+    }
+
+    public void UseItem(string[] separatedInputWords)
+    {
+        string nounToUse = separatedInputWords[1];
+        if (nounsInInventory.Contains(nounToUse))
+        {
+            if (useDictionary.ContainsKey(nounToUse))
+            {
+                var actionResult = useDictionary[nounToUse].DoActionRepsonse(controller);
+                if (!actionResult)
+                {
+                    controller.LogStringWithReturn("Hmm. Nothing happens.");
+                }
+            }
+            else
+            {
+                controller.LogStringWithReturn("You can't use the " + nounToUse);
+            }
+        } else
+        {
+            controller.LogStringWithReturn("There is no " + nounToUse + " in your inventory");
+        }
     }
 }

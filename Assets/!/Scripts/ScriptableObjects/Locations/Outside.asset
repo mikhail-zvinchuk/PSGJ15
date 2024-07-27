@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Outside
   m_EditorClassIdentifier: 
   description: Your stairs as always smell of cats.
-  locationName: 
+  locationName: outside
   exits:
   - keyString: police
     exitDescription: Go to the police station
@@ -24,3 +24,4 @@ MonoBehaviour:
   - keyString: upstairs
     exitDescription: Go back home
     valueLocation: {fileID: 11400000, guid: d0b7935350ff7e6469f3c8118d6d35af, type: 2}
+  interactableObjectsInLocation: []

@@ -9,7 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ae9c110e04dae34888924b3c6b75fe3, type: 3}
-  m_Name: Take
+  m_Script: {fileID: 11500000, guid: 0525d326d39d7344e9adf6104c6d0667, type: 3}
+  m_Name: CoatInAppartment
   m_EditorClassIdentifier: 
-  keyWord: take
+  requiredString: appartment
+  locationToChangeTo: {fileID: 11400000, guid: b10b43666740600478cfa8e99f166c3a, type: 2}

@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: My Appartment
   m_EditorClassIdentifier: 
   description: This your appartment whare you spent most of your time.
-  locationName: 
+  locationName: appartment
   exits:
   - keyString: outside
-    exitDescription: You put on your clothes an go outside
+    exitDescription: You can go ouside.
     valueLocation: {fileID: 11400000, guid: b10b43666740600478cfa8e99f166c3a, type: 2}
   interactableObjectsInLocation:
   - {fileID: 11400000, guid: 57669f3e60b5ba14183b1725cefb7cd3, type: 2}
