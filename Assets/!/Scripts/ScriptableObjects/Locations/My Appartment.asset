@@ -20,3 +20,4 @@ MonoBehaviour:
     valueLocation: {fileID: 11400000, guid: b10b43666740600478cfa8e99f166c3a, type: 2}
   interactableObjectsInLocation:
   - {fileID: 11400000, guid: 57669f3e60b5ba14183b1725cefb7cd3, type: 2}
+  - {fileID: 11400000, guid: 1bfb5ec51f2408146ae5858690b9a3b6, type: 2}
