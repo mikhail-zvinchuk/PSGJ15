@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -24,14 +24,19 @@ public class TextInput : MonoBehaviour
         char[] delimeterCharacters = { ' ' };
         string[] separatedInputWords = userInput.Split(delimeterCharacters);
 
-
+        bool handled = false;
         for (int i = 0; i < controller.inputActions.Length; i++)
         {
             InputAction action = controller.inputActions[i];
             if (action.keyWord == separatedInputWords[0]) {
                 action.RespondToInput(controller, separatedInputWords);
-            }
+                handled = true;
+            } 
 
+        }
+
+        if (!handled) {
+            controller.LogStringWithReturn("🜈🜈hat ? Non capisco, Prova qualcos'altro");
         }
 
         InputComplete();

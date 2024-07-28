@@ -10,11 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 88ef4192d1bb8754b9ce7ebe7afe459c, type: 3}
-  m_Name: Shield
+  m_Name: WaterSprayer
   m_EditorClassIdentifier: 
-  noun: shield
-  description: Shield hangs on the wall
-  interactions:
-  - action: {fileID: 11400000, guid: c942abf87c9c66649965992e3c20684a, type: 2}
-    textResponse: "It has \U0001F701 on it "
-    actionResponse: {fileID: 0}
+  noun: waterSprayingCan
+  description: Water sparaying can
+  interactions: []

@@ -1409,6 +1409,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   usableItemsList:
   - {fileID: 11400000, guid: 57669f3e60b5ba14183b1725cefb7cd3, type: 2}
+  - {fileID: 11400000, guid: d6270712372e58f41a81db9e4e97d332, type: 2}
+  - {fileID: 11400000, guid: 7d742b036b21ae74f8fe8820697a6ed0, type: 2}
+  - {fileID: 11400000, guid: 4c676ba57761f234085a2d44b1ed0a64, type: 2}
   nounsInLocation: []
 --- !u!1 &1195064686
 GameObject:
@@ -1467,18 +1470,18 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-    eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
-    in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit
-    amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-    laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-    in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-    occaecat cupidatat non proident, <mark=#ffff00aa>sunt </mark>in culpa qui officia
-    deserunt mollit anim id est laborum. \U0001F701\n"
+  m_text: "<line-height=50%>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+    minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+    commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem
+    ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+    ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+    in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+    Excepteur sint occaecat cupidatat non proident, <mark=#ffff00aa>sunt </mark>in
+    culpa qui officia deserunt mollit anim id est laborum. \U0001F701\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 40326cd8726fd084ab5962b552a9f9da, type: 2}
   m_sharedMaterial: {fileID: 1877261854580718373, guid: 40326cd8726fd084ab5962b552a9f9da, type: 2}
@@ -1517,7 +1520,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: -0.5
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0

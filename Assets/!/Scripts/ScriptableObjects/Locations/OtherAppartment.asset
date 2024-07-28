@@ -10,18 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6f19dd9c3ed32794a938af07e0f8268c, type: 3}
-  m_Name: My Appartment
+  m_Name: OtherAppartment
   m_EditorClassIdentifier: 
-  description: <line-height=50%>This your appartment where you have spent most of
-    your time.
-  locationName: appartment
+  description: Neibghours flat
+  locationName: flat
   exits:
   - keyString: corridor
-    exitDescription: You can go to the corridor.
+    exitDescription: You can return to the corridor
     valueLocation: {fileID: 11400000, guid: ac7018c2e49aa0542aa4059792851beb, type: 2}
-  - keyString: bathroom
-    exitDescription: You can go to the bathroom.
-    valueLocation: {fileID: 11400000, guid: 8c96c62bbc786f34db7f887244956066, type: 2}
   interactableObjectsInLocation:
-  - {fileID: 11400000, guid: d6270712372e58f41a81db9e4e97d332, type: 2}
-  - {fileID: 11400000, guid: 7d742b036b21ae74f8fe8820697a6ed0, type: 2}
+  - {fileID: 11400000, guid: 4c676ba57761f234085a2d44b1ed0a64, type: 2}

@@ -32,6 +32,7 @@ public class LocationNavigation : MonoBehaviour
         {
             currentLocation = exitDictinary[directionNoun];
             controller.LogStringWithReturn("You head off to the " + directionNoun);
+            controller.DisplayLocationText();
         } else
         {
             controller.LogStringWithReturn("You can't get to " + directionNoun);
