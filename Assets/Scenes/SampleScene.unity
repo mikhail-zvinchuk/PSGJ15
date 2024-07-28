@@ -1382,6 +1382,7 @@ MonoBehaviour:
   locationNavigation: {fileID: 0}
   interactionDescriptionsInLocation: []
   interactableItems: {fileID: 0}
+  action_count: 0
 --- !u!114 &1076426856
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1412,6 +1413,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d6270712372e58f41a81db9e4e97d332, type: 2}
   - {fileID: 11400000, guid: 7d742b036b21ae74f8fe8820697a6ed0, type: 2}
   - {fileID: 11400000, guid: 4c676ba57761f234085a2d44b1ed0a64, type: 2}
+  - {fileID: 11400000, guid: f2371356c34a08d48a3313d9d326ed8f, type: 2}
   nounsInLocation: []
 --- !u!1 &1195064686
 GameObject:

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
@@ -12,21 +12,48 @@ public class GController : MonoBehaviour
     [HideInInspector] public LocationNavigation locationNavigation;
     [HideInInspector] public List<string> interactionDescriptionsInLocation = new List<string>();
     [HideInInspector] public InteractableItems interactableItems;
+    [HideInInspector] public TextInput textInput;
 
     List<string> textLog = new List<string>();
+    List<string> textColors = new List<string>() { "E1E1E1", "cfcfcf", "b3b3b3", "ababab", "989898", "6d6d6d", "434343" };
+    int textColorIndex = 0;
 
+    public int action_count = 0;
 
     // Start is called before the first frame update
     void Awake()
     {
         interactableItems = GetComponent<InteractableItems>();
         locationNavigation = GetComponent<LocationNavigation>();
+        textInput = GetComponent<TextInput>();  
     }
 
     private void Start()
     {
         DisplayLocationText();
         DisplayLoggedText();
+    }
+
+    public void IncrementActionCount()
+    {
+        action_count++;
+        if (action_count % 2 == 0)
+        {
+            textColorIndex++;
+            if (textColors.Count <= textColorIndex)
+            {
+                textColorIndex = 0;
+                LogStringWithReturnNoStytle("<color=#E1E1E1> It seems that you can't see anything. Shadows take over! You lose.");
+                LogStringWithReturnNoStytle("It took you " + action_count + " actions.");
+                DisplayLoggedText();
+                // Handle lose
+                textInput.ToggleInputField();
+                
+                return;
+            }
+            
+            LogStringWithReturn("It becomes slightly darker");
+        }
     }
 
     public void DisplayLoggedText()
@@ -45,7 +72,14 @@ public class GController : MonoBehaviour
 
         string joinedInteractions = string.Join(Environment.NewLine, interactionDescriptionsInLocation.ToArray());
 
+        
+
         string combindeText = locationNavigation.currentLocation.description + Environment.NewLine + joinedInteractions;
+
+        if (locationNavigation.currentLocation.locationName == "outside")
+        {
+            combindeText += "It took you " + action_count + " actions.";
+}
 
         LogStringWithReturn(combindeText);
     }
@@ -99,6 +133,12 @@ public class GController : MonoBehaviour
     }
 
     public void LogStringWithReturn(string text)
+    {
+        string styles = "<color=#" + textColors[textColorIndex] + "><line-height=50%>";
+        textLog.Add(styles + text + Environment.NewLine);
+    }
+
+    public void LogStringWithReturnNoStytle(string text)
     {
         textLog.Add(text + Environment.NewLine);
     }

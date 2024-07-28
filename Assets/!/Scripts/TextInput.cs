@@ -10,6 +10,8 @@ public class TextInput : MonoBehaviour
 
     GController controller;
 
+    
+
     private void Awake()
     {
         controller = GetComponent<GController>();
@@ -42,11 +44,17 @@ public class TextInput : MonoBehaviour
         InputComplete();
     }
 
+    public void ToggleInputField()
+    {
+        inputField.enabled = !inputField.enabled;
+    }
+
     void InputComplete()
     {
         controller.DisplayLoggedText();
         inputField.ActivateInputField();
         inputField.text = null;
+        controller.IncrementActionCount();
     }
 
 }

@@ -16,8 +16,7 @@ MonoBehaviour:
     \nThere is \U0001F703 symbol  on the door."
   locationName: stairs_closed
   exits:
-  - keyString: Corridor
+  - keyString: corridor
     exitDescription: you can go back to the corridor
     valueLocation: {fileID: 11400000, guid: ac7018c2e49aa0542aa4059792851beb, type: 2}
-  interactableObjectsInLocation:
-  - {fileID: 11400000, guid: d6270712372e58f41a81db9e4e97d332, type: 2}
+  interactableObjectsInLocation: []
