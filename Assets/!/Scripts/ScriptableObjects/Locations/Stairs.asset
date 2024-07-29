@@ -19,6 +19,6 @@ MonoBehaviour:
     exitDescription: There is a door that leads to the outside.  Finaly!
     valueLocation: {fileID: 11400000, guid: b10b43666740600478cfa8e99f166c3a, type: 2}
   - keyString: corridor
-    exitDescription: There is a door that leads to the outside.  Finaly!
+    exitDescription: You can return to the coridor
     valueLocation: {fileID: 11400000, guid: b10b43666740600478cfa8e99f166c3a, type: 2}
   interactableObjectsInLocation: []

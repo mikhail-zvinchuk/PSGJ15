@@ -43,7 +43,7 @@ public class GController : MonoBehaviour
             if (textColors.Count <= textColorIndex)
             {
                 textColorIndex = 0;
-                LogStringWithReturnNoStytle("<color=#E1E1E1> It seems that you can't see anything. Shadows take over! You lose.");
+                LogStringWithReturnNoStytle("<color=#E1E1E1> It seems that you can't see anything." + Environment.NewLine + "Shadows take over! "+ Environment.NewLine + " You lose.");
                 LogStringWithReturnNoStytle("It took you " + action_count + " actions.");
                 DisplayLoggedText();
                 // Handle lose
