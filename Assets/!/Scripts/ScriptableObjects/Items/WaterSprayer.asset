@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88ef4192d1bb8754b9ce7ebe7afe459c, type: 3}
   m_Name: WaterSprayer
   m_EditorClassIdentifier: 
-  noun: waterSprayingCan
-  description: Water sparaying can
+  noun: sparayer
+  description: 'Water sprayer
+
+'
   interactions: []
