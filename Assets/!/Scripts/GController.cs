@@ -8,6 +8,7 @@ public class GController : MonoBehaviour
 
     public TextMeshProUGUI displayText;
     public InputAction[] inputActions;
+    public AudioSource doorsoundsource;
 
     [HideInInspector] public LocationNavigation locationNavigation;
     [HideInInspector] public List<string> interactionDescriptionsInLocation = new List<string>();
@@ -25,7 +26,8 @@ public class GController : MonoBehaviour
     {
         interactableItems = GetComponent<InteractableItems>();
         locationNavigation = GetComponent<LocationNavigation>();
-        textInput = GetComponent<TextInput>();  
+        textInput = GetComponent<TextInput>();
+        doorsoundsource = GetComponent<AudioSource>();
     }
 
     private void Start()
@@ -147,5 +149,10 @@ public class GController : MonoBehaviour
     void Update()
     {
 
+    }
+
+    internal void PlayDoorSound()
+    {
+        doorsoundsource.Play();
     }
 }

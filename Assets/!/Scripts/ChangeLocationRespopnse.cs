@@ -7,6 +7,7 @@ using UnityEngine;
 public class ChangeLocationRespopnse : ActionResponse
 {
     public Location locationToChangeTo;
+    
 
     public override bool DoActionRepsonse(GController controller)
     {
@@ -14,6 +15,7 @@ public class ChangeLocationRespopnse : ActionResponse
         {
             controller.locationNavigation.currentLocation = locationToChangeTo;
             controller.DisplayLocationText();
+            controller.PlayDoorSound();
             return true;
         }
 
