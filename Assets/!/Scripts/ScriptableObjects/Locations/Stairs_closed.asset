@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f19dd9c3ed32794a938af07e0f8268c, type: 3}
   m_Name: Stairs_closed
   m_EditorClassIdentifier: 
-  description: "You see a set of stairs that lead to the door that lead outside.
-    \nThere is \U0001F703 symbol  on the door."
+  description: "Your stairs as always smell of cats. \nYou see a set of stairs that
+    lead to the door that lead outside. \nThere is \U0001F703 symbol  on the door."
   locationName: stairs_closed
   exits:
   - keyString: corridor
-    exitDescription: you can go back to the corridor
+    exitDescription: You can <b>go</b> back to the <b>corridor</b>
     valueLocation: {fileID: 11400000, guid: ac7018c2e49aa0542aa4059792851beb, type: 2}
   interactableObjectsInLocation: []

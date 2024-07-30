@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f19dd9c3ed32794a938af07e0f8268c, type: 3}
   m_Name: Outside
   m_EditorClassIdentifier: 
-  description: "Your stairs as always smell of cats. Small bridge covers the distance
-    over the chasm that separates pavement and your appartment block.  \n\nYou got
-    out! \nCongratulations, you win!\nFor now..."
+  description: "Small bridge covers the distance over the chasm that separates pavement
+    and your appartment block.  \n\nYou got out! \nCongratulations, you win!\nFor
+    now..."
   locationName: outside
   exits: []
   interactableObjectsInLocation: []

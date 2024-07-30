@@ -16,9 +16,9 @@ MonoBehaviour:
   locationName: stairs
   exits:
   - keyString: outside
-    exitDescription: There is a door that leads to the outside.  Finaly!
+    exitDescription: There is a door that leads to the <b>outside</b>.  Finaly!
     valueLocation: {fileID: 11400000, guid: b10b43666740600478cfa8e99f166c3a, type: 2}
   - keyString: corridor
-    exitDescription: You can return to the coridor
+    exitDescription: You can <b>go</b> to the <b>coridor</b>
     valueLocation: {fileID: 11400000, guid: b10b43666740600478cfa8e99f166c3a, type: 2}
   interactableObjectsInLocation: []

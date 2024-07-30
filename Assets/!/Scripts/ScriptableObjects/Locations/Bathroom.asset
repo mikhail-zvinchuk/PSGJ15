@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f19dd9c3ed32794a938af07e0f8268c, type: 3}
   m_Name: Bathroom
   m_EditorClassIdentifier: 
-  description: 'You see a lighter and palo santo on the cover of water tank.  '
+  description: 'You see a <b>lighter</b> and palo santo on the cover of water tank.  '
   locationName: 
   exits:
   - keyString: back
-    exitDescription: 'Go back to the appartement '
+    exitDescription: '<b>go back</b> to the appartement '
     valueLocation: {fileID: 11400000, guid: d0b7935350ff7e6469f3c8118d6d35af, type: 2}
   interactableObjectsInLocation:
   - {fileID: 11400000, guid: f2371356c34a08d48a3313d9d326ed8f, type: 2}

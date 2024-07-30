@@ -16,9 +16,9 @@ MonoBehaviour:
   locationName: corridor
   exits:
   - keyString: flat
-    exitDescription: You can go to the other appartment
+    exitDescription: You can <b>go</b> to the other <b>flat</b>
     valueLocation: {fileID: 11400000, guid: aa9b0a193a4e5384b963e43e99f35f5a, type: 2}
   - keyString: stairs
-    exitDescription: You can go to the stairs
+    exitDescription: You can <b>go</b> to the <b>stairs</b>
     valueLocation: {fileID: 11400000, guid: 5d5dfd81123f8444ebee6fcf48de1efc, type: 2}
   interactableObjectsInLocation: []
