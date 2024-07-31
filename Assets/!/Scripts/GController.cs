@@ -85,7 +85,7 @@ public class GController : MonoBehaviour
         {
             textColorIndex = 0;
             combindeText += "It took you " + action_count + " actions." + Environment.NewLine;
-            combindeText += "Congratualtions! you win!" + Environment.NewLine;
+            combindeText += "Congratualtions! You win!" + Environment.NewLine;
             combindeText += "For now..." + Environment.NewLine;
             textInput.ToggleInputField();
         }
