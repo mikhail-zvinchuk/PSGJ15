@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f19dd9c3ed32794a938af07e0f8268c, type: 3}
   m_Name: My Appartment
   m_EditorClassIdentifier: 
-  description: <line-height=50%>This your <b>appartment</b> where you have spent
-    most of your time.
+  description: <line-height=50%>This your <b>apartment</b> where you have spent most
+    of your time. Seems that it's getting darker, you should go outside.
   locationName: appartment
   exits:
   - keyString: corridor
     exitDescription: You can <b>go</b> to the <b>corridor</b>.
-    valueLocation: {fileID: 11400000, guid: ac7018c2e49aa0542aa4059792851beb, type: 2}
+    valueLocation: {fileID: 11400000, guid: f58f46222b064134e92c1d632b671f54, type: 2}
   - keyString: bathroom
     exitDescription: You can <b>go</b> to the <b>bathroom</b>.
     valueLocation: {fileID: 11400000, guid: 8c96c62bbc786f34db7f887244956066, type: 2}

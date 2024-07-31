@@ -10,18 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6f19dd9c3ed32794a938af07e0f8268c, type: 3}
-  m_Name: Corridor
+  m_Name: CorStairsdOpen
   m_EditorClassIdentifier: 
-  description: You are in a corridor that leads to apartments.
+  description: 'Corriodr that has six doors. '
   locationName: corridor
   exits:
-  - keyString: flat
-    exitDescription: 
-    valueLocation: {fileID: 11400000, guid: aa9b0a193a4e5384b963e43e99f35f5a, type: 2}
   - keyString: stairs
     exitDescription: You can <b>go</b> to the <b>stairs</b>
     valueLocation: {fileID: 11400000, guid: 5d5dfd81123f8444ebee6fcf48de1efc, type: 2}
-  - keyString: apartment
+  - keyString: appartment
     exitDescription: You can <b>go</b> to the <b>appartment</b>
-    valueLocation: {fileID: 11400000, guid: d0b7935350ff7e6469f3c8118d6d35af, type: 2}
+    valueLocation: {fileID: 11400000, guid: 5d5dfd81123f8444ebee6fcf48de1efc, type: 2}
   interactableObjectsInLocation: []

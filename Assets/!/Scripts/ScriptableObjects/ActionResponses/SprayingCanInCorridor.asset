@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: SprayingCanInCorridor
   m_EditorClassIdentifier: 
   requiredString: corridor
-  locationToChangeTo: {fileID: 11400000, guid: ba5b45296d26a3c4e86008898ca98db3, type: 2}
+  locationToChangeTo: {fileID: 11400000, guid: ac7018c2e49aa0542aa4059792851beb, type: 2}

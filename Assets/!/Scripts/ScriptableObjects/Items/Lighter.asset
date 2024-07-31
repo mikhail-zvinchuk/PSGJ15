@@ -13,8 +13,11 @@ MonoBehaviour:
   m_Name: Lighter
   m_EditorClassIdentifier: 
   noun: lighter
-  description: Lighter description
+  description: 
   interactions:
   - action: {fileID: 11400000, guid: c942abf87c9c66649965992e3c20684a, type: 2}
-    textResponse: 'It is cheap lighter you can find on any gas station. '
+    textResponse: "It is cheap lighter that is shaped as a \U0001F702"
+    actionResponse: {fileID: 0}
+  - action: {fileID: 11400000, guid: 791b468c28663df42ad9493dfb35da87, type: 2}
+    textResponse: You pick up the lighter.
     actionResponse: {fileID: 0}

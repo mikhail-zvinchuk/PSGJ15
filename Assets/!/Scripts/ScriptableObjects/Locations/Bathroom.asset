@@ -15,8 +15,8 @@ MonoBehaviour:
   description: 'You see a <b>lighter</b> and palo santo on the cover of water tank.  '
   locationName: 
   exits:
-  - keyString: back
-    exitDescription: '<b>go back</b> to the appartement '
+  - keyString: apartment
+    exitDescription: '<b>go </b> to the <b>appartement</b> '
     valueLocation: {fileID: 11400000, guid: d0b7935350ff7e6469f3c8118d6d35af, type: 2}
   interactableObjectsInLocation:
   - {fileID: 11400000, guid: f2371356c34a08d48a3313d9d326ed8f, type: 2}

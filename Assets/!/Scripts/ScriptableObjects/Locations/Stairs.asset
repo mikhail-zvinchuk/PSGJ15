@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f19dd9c3ed32794a938af07e0f8268c, type: 3}
   m_Name: Stairs
   m_EditorClassIdentifier: 
-  description: You see a set of stairs that lead outside
+  description: You see a set of stairs that leads outside.
   locationName: stairs
   exits:
   - keyString: outside
@@ -20,5 +20,5 @@ MonoBehaviour:
     valueLocation: {fileID: 11400000, guid: b10b43666740600478cfa8e99f166c3a, type: 2}
   - keyString: corridor
     exitDescription: You can <b>go</b> to the <b>coridor</b>
-    valueLocation: {fileID: 11400000, guid: b10b43666740600478cfa8e99f166c3a, type: 2}
+    valueLocation: {fileID: 11400000, guid: ac7018c2e49aa0542aa4059792851beb, type: 2}
   interactableObjectsInLocation: []

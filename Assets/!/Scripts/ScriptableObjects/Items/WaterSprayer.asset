@@ -12,8 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88ef4192d1bb8754b9ce7ebe7afe459c, type: 3}
   m_Name: WaterSprayer
   m_EditorClassIdentifier: 
-  noun: sparayer
-  description: 'Water sprayer
-
-'
-  interactions: []
+  noun: sprayer
+  description: 'White water sprayer sits near the plant. '
+  interactions:
+  - action: {fileID: 11400000, guid: 791b468c28663df42ad9493dfb35da87, type: 2}
+    textResponse: You take the sprayer
+    actionResponse: {fileID: 0}
+  - action: {fileID: 11400000, guid: c942abf87c9c66649965992e3c20684a, type: 2}
+    textResponse: "It is a fairly cheap sprayer. Some one scratched \U0001F704 on
+      it's side. "
+    actionResponse: {fileID: 0}
+  - action: {fileID: 11400000, guid: dc122b69766fd444896ac4216fc5035d, type: 2}
+    textResponse: ' '
+    actionResponse: {fileID: 11400000, guid: b2ee2767cd35d27408f3d0875db02070, type: 2}

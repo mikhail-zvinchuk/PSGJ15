@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f19dd9c3ed32794a938af07e0f8268c, type: 3}
   m_Name: OtherAppartment
   m_EditorClassIdentifier: 
-  description: Neibghours flat
+  description: 'Flat seems quite abandoned. There is just a poster of Pirate Software
+    Game Jam 15 on the wall. '
   locationName: flat
   exits:
   - keyString: corridor
