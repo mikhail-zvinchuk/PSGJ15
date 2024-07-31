@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: WaterSprayer
   m_EditorClassIdentifier: 
   noun: sprayer
-  description: 'White water sprayer sits near the plant. '
+  description: 'White water <b>sprayer</b> sits near the plant. '
   interactions:
   - action: {fileID: 11400000, guid: 791b468c28663df42ad9493dfb35da87, type: 2}
     textResponse: You take the sprayer
