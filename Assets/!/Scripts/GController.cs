@@ -44,17 +44,20 @@ public class GController : MonoBehaviour
             textColorIndex++;
             if (textColors.Count <= textColorIndex)
             {
-                textColorIndex = 0;
-                LogStringWithReturnNoStytle("<color=#E1E1E1> It seems that you can't see anything." + Environment.NewLine + "Shadows take over! "+ Environment.NewLine + " You lose.");
-                LogStringWithReturnNoStytle("It took you " + action_count + " actions.");
-                DisplayLoggedText();
-                // Handle lose
-                textInput.ToggleInputField();
-                
-                return;
+                if (locationNavigation.currentLocation.locationName != "outside")
+                {
+                    textColorIndex = 0;
+                    LogStringWithReturnNoStytle("<color=#E1E1E1> It seems that you can't see anything." + Environment.NewLine + "Shadows take over! " + Environment.NewLine + " You lose.");
+                    LogStringWithReturnNoStytle("It took you " + action_count + " actions.");
+                    DisplayLoggedText();
+                    // Handle lose
+                    textInput.ToggleInputField();
+
+                    return;
+                }
             }
             
-            LogStringWithReturn("It becomes slightly darker");
+            LogStringWithReturn("It becomes slightly darker 🜖");
         }
     }
 
@@ -80,8 +83,12 @@ public class GController : MonoBehaviour
 
         if (locationNavigation.currentLocation.locationName == "outside")
         {
-            combindeText += "It took you " + action_count + " actions.";
-}
+            textColorIndex = 0;
+            combindeText += "It took you " + action_count + " actions." + Environment.NewLine;
+            combindeText += "Congratualtions! you win!" + Environment.NewLine;
+            combindeText += "For now..." + Environment.NewLine;
+            textInput.ToggleInputField();
+        }
 
         LogStringWithReturn(combindeText);
     }

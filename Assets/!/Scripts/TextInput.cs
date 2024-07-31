@@ -10,7 +10,9 @@ public class TextInput : MonoBehaviour
 
     GController controller;
 
+    List<string> iDontUnderstands = new List<string>() { "🜈🜈hat ? Non capisco, Prova qualcos'altro", "🜈🜈hat ? Non intellego, Try aliquid aliud", "🜈🜈hat ? Capissi minga, pruva quaicos d’olter", "🜈🜈hat ? Chan eil mi a’ tuigsinn, Feuch rudeigin eile" };
     
+
 
     private void Awake()
     {
@@ -38,7 +40,8 @@ public class TextInput : MonoBehaviour
         }
 
         if (!handled) {
-            controller.LogStringWithReturn("🜈🜈hat ? Non capisco, Prova qualcos'altro");
+
+            controller.LogStringWithReturn(iDontUnderstands[Random.Range(0, iDontUnderstands.Count - 1)]);
         }
 
         InputComplete();
