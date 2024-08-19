@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,7 +5,7 @@ public class LocationNavigation : MonoBehaviour
 {
     public Location currentLocation;
 
-    Dictionary<string, Location> exitDictinary = new Dictionary<string, Location>();
+    readonly Dictionary<string, Location> exitDictinary = new();
     GController controller;
 
     private void Awake()

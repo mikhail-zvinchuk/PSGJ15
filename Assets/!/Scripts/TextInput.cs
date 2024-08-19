@@ -1,8 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class TextInput : MonoBehaviour
 {
@@ -10,7 +8,7 @@ public class TextInput : MonoBehaviour
 
     GController controller;
 
-    List<string> iDontUnderstands = new List<string>() { "🜈🜈hat ? Non capisco, Prova qualcos'altro", "🜈🜈hat ? Non intellego, Try aliquid aliud", "🜈🜈hat ? Capissi minga, pruva quaicos d’olter", "🜈🜈hat ? Chan eil mi a’ tuigsinn, Feuch rudeigin eile" };
+    readonly List<string> iDontUnderstands = new() { "🜈🜈hat ? Non capisco, Prova qualcos'altro", "🜈🜈hat ? Non intellego, Try aliquid aliud", "🜈🜈hat ? Capissi minga, pruva quaicos d’olter", "🜈🜈hat ? Chan eil mi a’ tuigsinn, Feuch rudeigin eile" };
 
 
 

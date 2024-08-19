@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 
 public class GController : MonoBehaviour
 {
@@ -11,17 +11,17 @@ public class GController : MonoBehaviour
     public AudioSource doorsoundsource;
 
     [HideInInspector] public LocationNavigation locationNavigation;
-    [HideInInspector] public List<string> interactionDescriptionsInLocation = new List<string>();
+    [HideInInspector] public List<string> interactionDescriptionsInLocation = new();
     [HideInInspector] public InteractableItems interactableItems;
     [HideInInspector] public TextInput textInput;
 
-    List<string> textLog = new List<string>();
-    List<string> textColors = new List<string>() { "E1E1E1", "cfcfcf", "b3b3b3", "ababab", "989898", "6d6d6d", "434343" };
+    readonly List<string> textLog = new();
+    readonly List<string> textColors = new() { "E1E1E1", "cfcfcf", "b3b3b3", "ababab", "989898", "6d6d6d", "434343" };
     int textColorIndex = 0;
 
     public int action_count = 0;
 
-    // Start is called before the first frame update
+
     void Awake()
     {
         interactableItems = GetComponent<InteractableItems>();
@@ -151,12 +151,6 @@ public class GController : MonoBehaviour
     public void LogStringWithReturnNoStytle(string text)
     {
         textLog.Add(text + Environment.NewLine);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 
     internal void PlayDoorSound()

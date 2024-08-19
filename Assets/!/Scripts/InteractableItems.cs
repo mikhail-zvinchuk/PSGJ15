@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -7,15 +6,15 @@ public class InteractableItems : MonoBehaviour
 {
     public List<InteractableObject> usableItemsList;
 
-    public Dictionary<string, string> examineDictionary = new Dictionary<string, string>();
-    public Dictionary<string, string> takeDictionary = new Dictionary<string, string>();
+    public Dictionary<string, string> examineDictionary = new();
+    public Dictionary<string, string> takeDictionary = new();
 
-    [HideInInspector] public List<string> nounsInLocation = new List<string>();
+    [HideInInspector] public List<string> nounsInLocation = new();
 
 
 
-    Dictionary<string, ActionResponse> useDictionary = new Dictionary<string, ActionResponse>();
-    List<string> nounsInInventory = new List<string>();
+    readonly Dictionary<string, ActionResponse> useDictionary = new();
+    readonly List<string> nounsInInventory = new();
 
     GController controller;
 
