@@ -13,7 +13,7 @@ The only implemented game mechanic is fading of the text while player progresses
 
 I don't have any illusions that this is steam ready. I just wanted to create playable and repayable game entry that works and has all the parts and fulfills all the formal criteria. 
 
-Checkout [game design document](DesignAssets\Before%20it%20fades.pdf) 
+Checkout [game design document](DesignAssets/Before%20it%20fades.pdf) 
 
 ## 📋 Table of Contents
 
@@ -26,17 +26,17 @@ Checkout [game design document](DesignAssets\Before%20it%20fades.pdf)
 
 ## ✨ Features
 
-- Text based navigation
-- Fading of the text with each player input
-- SOund effects for door opning
-- Backgorund music
-- Item pickup and use system 
-- Builds for web
+- Text-Based Navigation System
+- Gradual Text Fading with Each Player Input
+- Door Opening Sound Effects
+- Background Music
+- Item Pickup and Usage System
+- Web-Compatible Builds
 
 ## Ranking
 I'm very glad that my first published game recieved these score. Of course in agrand scheme of things this is not much. But definately better then nothing.
 
-![alt text](DesignAssets\score.png)
+![score card](DesignAssets/score.png)
 
 Next time i'm going to do better)
 ## Diagrams
