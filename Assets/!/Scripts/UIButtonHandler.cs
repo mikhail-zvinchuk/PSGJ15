@@ -8,7 +8,7 @@ public class UIButtonHandler : MonoBehaviour
 
     void Awake()
     {
-        audioListener = GetComponent<AudioListener>();  
+        audioListener = GetComponent<AudioListener>();
     }
 
     public void ToggleSound()

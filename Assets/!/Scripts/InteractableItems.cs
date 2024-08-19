@@ -14,17 +14,18 @@ public class InteractableItems : MonoBehaviour
 
 
 
-    Dictionary<string,  ActionResponse> useDictionary = new Dictionary<string, ActionResponse>();
+    Dictionary<string, ActionResponse> useDictionary = new Dictionary<string, ActionResponse>();
     List<string> nounsInInventory = new List<string>();
 
     GController controller;
 
-    void Awake() { 
+    void Awake()
+    {
         controller = GetComponent<GController>();
     }
 
 
-   public string GetObjectsNotInInventory(InteractableObject interactable)
+    public string GetObjectsNotInInventory(InteractableObject interactable)
     {
         if (!nounsInInventory.Contains(interactable.noun))
         {
@@ -43,11 +44,12 @@ public class InteractableItems : MonoBehaviour
             if (interactableObjectInInventory == null)
             {
                 continue;
-            } else
+            }
+            else
             {
-                foreach(var interaction in interactableObjectInInventory.interactions)
+                foreach (var interaction in interactableObjectInInventory.interactions)
                 {
-                    if(interaction.actionResponse == null)
+                    if (interaction.actionResponse == null)
                         continue;
 
                     if (!useDictionary.ContainsKey(noun))
@@ -59,10 +61,11 @@ public class InteractableItems : MonoBehaviour
         }
     }
 
-    InteractableObject GetInteractableObjectFromUsableList(string noun) {
+    InteractableObject GetInteractableObjectFromUsableList(string noun)
+    {
         foreach (var item in usableItemsList)
         {
-            if( item.noun == noun)
+            if (item.noun == noun)
             {
                 return item;
             }
@@ -88,7 +91,7 @@ public class InteractableItems : MonoBehaviour
         {
             controller.LogStringWithReturn("You don't have anything with you apart your basic clothes.");
         }
-       
+
 
     }
 
@@ -118,13 +121,14 @@ public class InteractableItems : MonoBehaviour
             AddActionResponsesTOUseDictionary();
             nounsInLocation.Remove(noun);
             return takeDictionary;
-        } else
+        }
+        else
         {
             controller.LogStringWithReturn("There is no " + noun + " here to take.");
             return null;
         }
 
-      
+
     }
 
     public void UseItem(string[] separatedInputWords)
@@ -144,7 +148,8 @@ public class InteractableItems : MonoBehaviour
             {
                 controller.LogStringWithReturn("You can't use the " + nounToUse);
             }
-        } else
+        }
+        else
         {
             controller.LogStringWithReturn("There is no " + nounToUse + " in your inventory");
         }

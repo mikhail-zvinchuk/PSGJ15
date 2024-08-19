@@ -11,7 +11,7 @@ public class TextInput : MonoBehaviour
     GController controller;
 
     List<string> iDontUnderstands = new List<string>() { "🜈🜈hat ? Non capisco, Prova qualcos'altro", "🜈🜈hat ? Non intellego, Try aliquid aliud", "🜈🜈hat ? Capissi minga, pruva quaicos d’olter", "🜈🜈hat ? Chan eil mi a’ tuigsinn, Feuch rudeigin eile" };
-    
+
 
 
     private void Awake()
@@ -24,7 +24,7 @@ public class TextInput : MonoBehaviour
     {
         userInput = userInput.ToLower();
         controller.LogStringWithReturn(userInput);
-        
+
         char[] delimeterCharacters = { ' ' };
         string[] separatedInputWords = userInput.Split(delimeterCharacters);
 
@@ -32,14 +32,16 @@ public class TextInput : MonoBehaviour
         for (int i = 0; i < controller.inputActions.Length; i++)
         {
             InputAction action = controller.inputActions[i];
-            if (action.keyWord == separatedInputWords[0]) {
+            if (action.keyWord == separatedInputWords[0])
+            {
                 action.RespondToInput(controller, separatedInputWords);
                 handled = true;
-            } 
+            }
 
         }
 
-        if (!handled) {
+        if (!handled)
+        {
 
             controller.LogStringWithReturn(iDontUnderstands[Random.Range(0, iDontUnderstands.Count - 1)]);
         }

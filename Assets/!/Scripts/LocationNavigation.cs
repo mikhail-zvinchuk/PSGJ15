@@ -6,13 +6,13 @@ public class LocationNavigation : MonoBehaviour
 {
     public Location currentLocation;
 
-    Dictionary<string, Location>  exitDictinary = new Dictionary<string, Location>();
+    Dictionary<string, Location> exitDictinary = new Dictionary<string, Location>();
     GController controller;
 
     private void Awake()
     {
         controller = GetComponent<GController>();
-        
+
     }
 
 
@@ -25,15 +25,16 @@ public class LocationNavigation : MonoBehaviour
         }
     }
 
-    
+
     public void AttemptToChangeLocations(string directionNoun)
     {
-        if ( exitDictinary.ContainsKey( directionNoun))
+        if (exitDictinary.ContainsKey(directionNoun))
         {
             currentLocation = exitDictinary[directionNoun];
             controller.LogStringWithReturn("You head off to the " + directionNoun);
             controller.DisplayLocationText();
-        } else
+        }
+        else
         {
             controller.LogStringWithReturn("You can't get to " + directionNoun);
         }

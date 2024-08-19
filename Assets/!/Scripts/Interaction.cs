@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class Interaction 
+public class Interaction
 {
     public InputAction action;
-    [TextArea] 
+    [TextArea]
     public string textResponse;
     public ActionResponse actionResponse;
 

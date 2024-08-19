@@ -7,7 +7,7 @@ using UnityEngine;
 public class ChangeLocationRespopnse : ActionResponse
 {
     public Location locationToChangeTo;
-    
+
 
     public override bool DoActionRepsonse(GController controller)
     {

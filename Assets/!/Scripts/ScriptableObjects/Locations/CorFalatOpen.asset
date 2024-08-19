@@ -20,6 +20,6 @@ MonoBehaviour:
     exitDescription: 
     valueLocation: {fileID: 11400000, guid: aa9b0a193a4e5384b963e43e99f35f5a, type: 2}
   - keyString: apartment
-    exitDescription: You can <b>go</b> to the <b>appartment</b>
+    exitDescription: You can <b>go</b> to the <b>apartment</b>
     valueLocation: {fileID: 11400000, guid: d0b7935350ff7e6469f3c8118d6d35af, type: 2}
   interactableObjectsInLocation: []

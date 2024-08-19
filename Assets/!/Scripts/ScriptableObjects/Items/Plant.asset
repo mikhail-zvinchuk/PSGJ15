@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Plant
   m_EditorClassIdentifier: 
   noun: plant
-  description: This is a <b>plant</b> in a pot.
+  description: There  is a <b>plant</b> in a pot.
   interactions:
   - action: {fileID: 11400000, guid: c942abf87c9c66649965992e3c20684a, type: 2}
     textResponse: "You take a close look at the pot and find \U0001F703 symbol"

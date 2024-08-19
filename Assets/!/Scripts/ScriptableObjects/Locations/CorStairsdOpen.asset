@@ -18,7 +18,7 @@ MonoBehaviour:
   - keyString: stairs
     exitDescription: You can <b>go</b> to the <b>stairs</b>
     valueLocation: {fileID: 11400000, guid: 5d5dfd81123f8444ebee6fcf48de1efc, type: 2}
-  - keyString: appartment
-    exitDescription: You can <b>go</b> to the <b>appartment</b>
+  - keyString: apartment
+    exitDescription: You can <b>go</b> to the <b>apartment</b>
     valueLocation: {fileID: 11400000, guid: 5d5dfd81123f8444ebee6fcf48de1efc, type: 2}
   interactableObjectsInLocation: []

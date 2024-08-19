@@ -56,7 +56,7 @@ public class GController : MonoBehaviour
                     return;
                 }
             }
-            
+
             LogStringWithReturn("It becomes slightly darker 🜖");
         }
     }
@@ -77,7 +77,7 @@ public class GController : MonoBehaviour
 
         string joinedInteractions = string.Join(Environment.NewLine, interactionDescriptionsInLocation.ToArray());
 
-        
+
 
         string combindeText = locationNavigation.currentLocation.description + Environment.NewLine + joinedInteractions;
 
@@ -101,7 +101,8 @@ public class GController : MonoBehaviour
 
     void PrepareObjectsForInteraction(Location location)
     {
-        foreach (var interactableObject in location.interactableObjectsInLocation) { 
+        foreach (var interactableObject in location.interactableObjectsInLocation)
+        {
             string descriptonNotInInventory = interactableItems.GetObjectsNotInInventory(interactableObject);
             if (descriptonNotInInventory != null)
             {

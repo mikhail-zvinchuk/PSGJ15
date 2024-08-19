@@ -15,7 +15,7 @@ public class TextToggler : MonoBehaviour
 
     public void ToggleText()
     {
-        
+
         if (text.text == "unmute")
         {
             text.text = "mute";
